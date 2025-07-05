@@ -11,14 +11,11 @@
           "Shared": {
             "$path": "src/Shared",
             "ExtPackages": {
-              "$path": "ExtPackages"
+              "$path": "ext_packages"
             }
           },
           "Storage": {
             "$path": "src/Storage",
-            "ExtPackages": {
-              "$path": "ExtServerPackages"
-            },
             "Packages": {
               "$path": "roblox_server_packages"
             }
