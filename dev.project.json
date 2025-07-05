@@ -7,16 +7,16 @@
       "Rorooms": {
         "$className": "Folder",
         "ThumbnailCamera": {
-          "$path": "Include/ThumbnailCamera.rbxm"
+          "$path": "include/ThumbnailCamera.rbxm"
         },
         "EasyLoader": {
-          "$path": "Include/EasyLoader",
+          "$path": "include/EasyLoader",
           "$ignoreUnknownInstances": true
         },
         "Rorooms": {
-          "$path": "Include/Linking.luau",
+          "$path": "include/Linking.luau",
           "Packages": {
-            "$path": "Packages",
+            "$path": "roblox_packages",
             "Rorooms": {
               "$path": "src/API",
               "SourceCode": {
@@ -33,7 +33,7 @@
                     "$path": "ExtServerPackages"
                   },
                   "Packages": {
-                    "$path": "ServerPackages"
+                    "$path": "roblox_server_packages"
                   }
                 },
                 "Server": {

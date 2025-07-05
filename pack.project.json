@@ -1,13 +1,13 @@
 {
   "name": "Rorooms",
   "tree": {
-    "$path": "Include/Linking.luau",
+    "$path": "include/Linking.luau",
     "Packages": {
-      "$path": "Packages",
+      "$path": "roblox_packages",
       "Rorooms": {
-        "$path": "Include/Linking.luau",
+        "$path": "include/Linking.luau",
         "Packages": {
-          "$path": "Packages",
+          "$path": "roblox_packages",
           "Rorooms": {
             "$path": "src/API",
             "SourceCode": {
@@ -24,7 +24,7 @@
                   "$path": "ExtServerPackages"
                 },
                 "Packages": {
-                  "$path": "ServerPackages"
+                  "$path": "roblox_server_packages"
                 }
               },
               "Server": {

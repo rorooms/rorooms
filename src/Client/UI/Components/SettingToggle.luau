@@ -8,7 +8,7 @@ local Util = OnyxUI.Util
 
 local DISABLED_TRANSPARENCY = 0.5
 
-local OnyxUIFolder = Rorooms.Parent.OnyxUI.Parent._Index["imavafe_onyx-ui@0.5.0"]["onyx-ui"]
+local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
 local SwitchGroup = require(OnyxUIFolder.Components.SwitchGroup)
 
 export type Props = SwitchGroup.Props & {
