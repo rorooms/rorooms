@@ -98,6 +98,9 @@ export type Config = {
 			BaseLevelUpXP: number?,
 		}?,
 	}?,
+	General: {
+		AssetId: number?,
+	}?,
 }
 
 local CONFIG_TEMPLATE: Config = {
@@ -144,6 +147,9 @@ local CONFIG_TEMPLATE: Config = {
 			BaseLevelUpXP = 10,
 		},
 		UI = {},
+	},
+	General = {
+		AssetId = 131892669922226,
 	},
 }
 

@@ -1,3 +1,4 @@
+local MarketplaceService = game:GetService("MarketplaceService")
 local StarterGui = game:GetService("StarterGui")
 local Players = game:GetService("Players")
 
@@ -7,6 +8,7 @@ local Fusion = require(Rorooms.Parent.Fusion)
 local States = require(Rorooms.SourceCode.Client.UI.States)
 local Version = require(Rorooms.Version)
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
+local Config = require(Rorooms.Config).Config
 
 local Children = Fusion.Children
 local Themer = OnyxUI.Themer
@@ -50,6 +52,9 @@ return function(Scope: Fusion.Scope<any>, Props)
 				AutomaticSize = Enum.AutomaticSize.None,
 				ScrollBarThickness = Theme.StrokeThickness["1"],
 				ListEnabled = true,
+				-- ListPadding = Scope:Computed(function(Use)
+				-- 	return UDim.new(0, Use(Theme.Spacing["1.5"]))
+				-- end),
 				Padding = Scope:Computed(function(Use)
 					return UDim.new(0, Use(Theme.StrokeThickness["1"]))
 				end),
@@ -59,34 +64,52 @@ return function(Scope: Fusion.Scope<any>, Props)
 				ListHorizontalFlex = Enum.UIFlexAlignment.Fill,
 
 				[Children] = {
-					Scope:SettingToggle {
-						Label = "Mute music",
-						Switched = States.UserSettings.MuteMusic,
-					},
-					Scope:SettingToggle {
-						Label = "Hide UI",
-						Switched = States.UserSettings.HideUI,
-					},
+					Scope:Frame {
+						ListEnabled = true,
+						ListHorizontalFlex = Enum.UIFlexAlignment.Fill,
 
-					Scope:Text {
-						Text = Scope:Computed(function(Use)
+						[Children] = {
+							Scope:SettingToggle {
+								Label = "Mute music",
+								Switched = States.UserSettings.MuteMusic,
+							},
+							Scope:SettingToggle {
+								Label = "Hide UI",
+								Switched = States.UserSettings.HideUI,
+							},
+						},
+					},
+					Scope:Divider {},
+					Scope:Button {
+						Name = "VersionButton",
+						Content = Scope:Computed(function(Use)
 							local UpToDateValue = Use(States.Rorooms.UpToDate)
-							local VersionStamp = `[Rorooms v{Version}]`
+							local VersionStamp = `Rorooms v{Version}`
 
 							if UpToDateValue == false then
-								return `{VersionStamp} - Out of date`
+								return { `{VersionStamp} - Out of date` }
 							else
-								return VersionStamp
+								return { VersionStamp }
 							end
 						end),
-						TextColor3 = Scope:Computed(function(Use)
+						ContentColor = OnyxUI.Util.Colors.Black,
+						Color = Scope:Computed(function(Use)
 							local UpToDateValue = Use(States.Rorooms.UpToDate)
+
 							if UpToDateValue == false then
-								return Use(Theme.Colors.Warning.Main)
+								return Use(Theme.Colors.Warning.Dark)
 							else
-								return Use(Theme.Colors.NeutralContent.Dark)
+								return Use(Theme.Colors.BaseContent.Main)
 							end
 						end),
+
+						OnActivated = function()
+							if Players.LocalPlayer ~= nil then
+								pcall(function()
+									MarketplaceService:PromptPurchase(Players.LocalPlayer, Config.General.AssetId)
+								end)
+							end
+						end,
 					},
 				},
 			},
