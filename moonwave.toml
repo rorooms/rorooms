@@ -4,19 +4,21 @@ gitSourceBranch = "main"
 [docusaurus]
 url = "https://docs.rorooms.com"
 baseUrl = "/"
-favicon = "svg/LogoWhite.svg"
-tagline = "Elevate your worlds."
+favicon = "svg/LogoGlyph.svg"
+tagline = "All-in-one social framework"
 
 [home]
 enabled = true
+includeReadme = false
+bannerImage = "img/BannerBackground.png"
 
 [[home.features]]
-title = "Social toolkit 🙋"
+title = "Social toolkit 🧰"
 description = "With profiles, items, emotes and more, your world has everything it needs to engage players."
 image = "img/Toolbox.png"
 
 [[home.features]]
-title = "Open network 🌐"
+title = "Worlds network 🌐"
 description = "A universal network, interconnecting all worlds, and allowing for more reach than possible alone."
 image = "img/Globe.png"
 
@@ -25,31 +27,32 @@ title = "Happy players 🙌"
 description = "A seamless social experience, hopping between worlds with friends, and enjoying more time in-game."
 image = "img/People.png"
 
+[footer]
+style = "light"
+copyright = "Copyright © 2025 Avafe. Built with Moonwave and Docusaurus"
+
 [[footer.links]]
 title = "Rorooms"
 
 [[footer.links.items]]
-label = "Landing"
-href = "https://rorooms.com/"
-
-[[footer.links.items]]
 label = "Publish"
 href = "https://rorooms.com/publish"
+
+[[footer.links.items]]
+label = "Demo"
+href = "https://rorooms.com/demo"
 
 [[footer.links]]
 title = "Community"
 
 [[footer.links.items]]
 label = "Discord"
-href = "https://rorooms.com/discord"
+href = "https://loneka.com/suite/discord"
 
 [[footer.links.items]]
 label = "X"
-href = "https://rorooms.com/x"
-
-[[footer.links]]
-title = "More"
+href = "https://loneka.com/x"
 
 [[footer.links.items]]
 label = "GitHub"
-href = "https://github.com/Rorooms"
+href = "https://loneka.com/github"
