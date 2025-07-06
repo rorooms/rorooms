@@ -1,11 +1,3 @@
-local RunService = game:GetService("RunService")
-
-if RunService:IsServer() then
-	return require(script.Server)
-else
-	return require(script.Client)
-end
-
 --[=[
 	@class Rorooms
 ]=]
@@ -29,6 +21,13 @@ end
 ]=]
 
 --[=[
+	@interface Config
+	@within Rorooms
+
+	.Test boolean?
+]=]
+
+--[=[
 	@method Prompt
 	@within Rorooms
 	@client
@@ -39,3 +38,11 @@ end
 
 	[`Prompt` type available here](https://github.com/Rorooms/Rorooms/blob/main/src/Client/UI/States/Prompts.luau)
 ]=]
+
+local RunService = game:GetService("RunService")
+
+if RunService:IsServer() then
+	return require(script.Server)
+else
+	return require(script.Client)
+end
