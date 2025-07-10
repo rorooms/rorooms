@@ -9,6 +9,7 @@ local States = require(Rorooms.SourceCode.Client.UI.States)
 local Version = require(Rorooms.Version)
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
 local Config = require(Rorooms.Config).Config
+local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
 local Children = Fusion.Children
 local Themer = OnyxUI.Themer
@@ -52,9 +53,6 @@ return function(Scope: Fusion.Scope<any>, Props)
 				AutomaticSize = Enum.AutomaticSize.None,
 				ScrollBarThickness = Theme.StrokeThickness["1"],
 				ListEnabled = true,
-				-- ListPadding = Scope:Computed(function(Use)
-				-- 	return UDim.new(0, Use(Theme.Spacing["1.5"]))
-				-- end),
 				Padding = Scope:Computed(function(Use)
 					return UDim.new(0, Use(Theme.StrokeThickness["1"]))
 				end),
@@ -84,12 +82,14 @@ return function(Scope: Fusion.Scope<any>, Props)
 						Name = "VersionButton",
 						Content = Scope:Computed(function(Use)
 							local UpToDateValue = Use(States.Rorooms.UpToDate)
-							local VersionStamp = `Rorooms v{Version}`
+							local VersionStamp = { Assets.Icons.Rorooms.LogoGlyph, `Rorooms {Version}` }
 
 							if UpToDateValue == false then
-								return { `{VersionStamp} - Out of date` }
+								table.insert(VersionStamp, `- Out of date`)
+
+								return VersionStamp
 							else
-								return { VersionStamp }
+								return VersionStamp
 							end
 						end),
 						ContentColor = OnyxUI.Util.Colors.Black,
