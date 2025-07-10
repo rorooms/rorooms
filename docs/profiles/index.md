@@ -12,6 +12,8 @@ A full profiles system supporting nicknames, bios, roles, and leveling! Edit you
 
 ### Easy loader
 
+Roles are added as `Configuration` instances within the Roles folder:
+
 ```
 [Explorer panel]
 └── Rorooms/
@@ -43,11 +45,11 @@ Rorooms:Configure({
 
 ### Properties
 
-| Attribute             | Type     | Optional              |
-| --------------------- | -------- | --------------------- |
-| `RoleId`              | `string` | ⚠️ - For manual config |
-| `Name`                | `string` | ❌                     |
-| `Color`               | `Color3` | ✅                     |
-| `LayoutOrder`         | `number` | ✅                     |
-| `LevelRequirement`    | `number` | ✅                     |
-| `GamepassRequirement` | `number` | ✅                     |
+| Attribute             | Type     | Required                |
+| --------------------- | -------- | ----------------------- |
+| `RoleId`              | `string` | ⚠️ - Only w/ easy loader |
+| `Name`                | `string` | ❌                       |
+| `Color`               | `Color3` | ❌                       |
+| `LayoutOrder`         | `number` | ❌                       |
+| `LevelRequirement`    | `number` | ❌                       |
+| `GamepassRequirement` | `number` | ❌                       |

@@ -10,6 +10,8 @@ sidebar_position: 3
 
 ### Easy loader
 
+Items are added as `Tool` instances within the Items folder:
+
 ```
 [Explorer panel]
 └── Rorooms/
@@ -23,14 +25,16 @@ sidebar_position: 3
     └── <-- Your properties here
 ```
 
-### Config
+### Manual config
 
 ```lua
 Rorooms:Configure({
   Systems = {
     Items = {
-      MyItem = {
-        -- Properties here
+      Items = {
+        MyItem = {
+          -- Properties here
+        }
       }
     }
   }
@@ -39,14 +43,14 @@ Rorooms:Configure({
 
 ### Properties
 
-| Property              | Type     | Optional              |
-| --------------------- | -------- | --------------------- |
-| `ItemId`              | `string` | ⚠️ - For manual config |
-| `Tool`                | `Tool`   | ⚠️ - For easy loader   |
-| `DisplayName`         | `string` | ✅                     |
-| `LevelRequirement`    | `number` | ✅                     |
-| `GamepassRequirement` | `number` | ✅                     |
-| `Category`            | `string` | ✅                     |
-| `Color`               | `Color3` | ✅                     |
-| `LabelText`           | `string` | ✅                     |
-| `LabelIcon`           | `string` | ✅                     |
+| Property              | Type     | Required                  |
+| --------------------- | -------- | ------------------------- |
+| `ItemId`              | `string` | ⚠️ - Only w/ easy loader   |
+| `Tool`                | `Tool`   | ⚠️ - Only w/ manual config |
+| `DisplayName`         | `string` | ❌                         |
+| `LevelRequirement`    | `number` | ❌                         |
+| `GamepassRequirement` | `number` | ❌                         |
+| `Category`            | `string` | ❌                         |
+| `Color`               | `Color3` | ❌                         |
+| `LabelText`           | `string` | ❌                         |
+| `LabelIcon`           | `string` | ❌                         |

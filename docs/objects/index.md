@@ -4,20 +4,15 @@ sidebar_position: 6
 
 # Objects
 
-Apply these tags onto in-game objects to easily add functionality within your world. Tags can be applied from within the properties panel.
+Apply these tags onto in-game objects to add no-code functionality throughout your world. Tags and attributes can be applied from within the properties panel.
 
 ## Animated seats 🪑
 
-Seats that support custom sitting animations, and prompt-to-sit functionality.
+Seats enhanced with animation and prompting, placed in-world as `Seat` instances with the `RR_AnimatedSeat` tag.
 
-| Data        | Value             |
-| ----------- | ----------------- |
-| `Tag`       | `RR_AnimatedSeat` |
-| `ClassName` | `Seat`            |
-
-| Attribute        | Type      | Optional |
+| Attribute        | Type      | Required |
 | ---------------- | --------- | -------- |
-| `RR_PromptToSit` | `boolean` | ✅        |
+| `RR_PromptToSit` | `boolean` | ❌        |
 
 ### Children
 
@@ -25,74 +20,41 @@ Seats that support custom sitting animations, and prompt-to-sit functionality.
 
 ## Item givers 🫴
 
-Prompt parts that give out items.
+Prompters that give out items, placed in-world as `BasePart` instances with the `RR_ItemGiver` tag.
 
-| Data        | Value          |
-| ----------- | -------------- |
-| `Tag`       | `RR_ItemGiver` |
-| `ClassName` | `BasePart`     |
-
-| Attribute   | Type     | Optional |
+| Attribute   | Type     | Required |
 | ----------- | -------- | -------- |
-| `RR_ItemId` | `string` | ❌        |
-
-### Children
-
-Variant models must be arranged in numerical order.
-
-- "1" - `Model`
-- "2" - `Model`
-- "..." - `Model`
+| `RR_ItemId` | `string` | ✅        |
 
 ## Locked zones 🔒
 
-Locked zones are parts that prevent players from being within them based on certain criteria.
+Parts that conditionally respawn players within their bounds, placed in-world as `BasePart` instances with the `RR_LockedZone` tag.
 
-| Data        | Value           |
-| ----------- | --------------- |
-| `Tag`       | `RR_LockedZone` |
-| `ClassName` | `BasePart`      |
-
-| Attribute             | Type     | Optional |
-| --------------------- | -------- | -------- |
-| `LevelRequirement`    | `number` | ✅        |
-| `GamepassRequirement` | `number` | ✅        |
+| Attribute                | Type     | Required |
+| ------------------------ | -------- | -------- |
+| `RR_LevelRequirement`    | `number` | ❌        |
+| `RR_GamepassRequirement` | `number` | ❌        |
 
 ## Locked doors 🔒
 
-Locked doors are parts that prevent players from walking through them based on certain criteria.
+Parts that conditionally prevent players from walking through them, placed in-world as `BasePart` instances with the `RR_LockedDoor` tag.
 
-| Data        | Value           |
-| ----------- | --------------- |
-| `Tag`       | `RR_LockedDoor` |
-| `ClassName` | `BasePart`      |
-
-| Attribute             | Type     | Optional |
-| --------------------- | -------- | -------- |
-| `LevelRequirement`    | `number` | ✅        |
-| `GamepassRequirement` | `number` | ✅        |
+| Attribute                | Type     | Required |
+| ------------------------ | -------- | -------- |
+| `RR_LevelRequirement`    | `number` | ❌        |
+| `RR_GamepassRequirement` | `number` | ❌        |
 
 ## World teleporters 🌐
 
-Parts that prompt teleports to other RoRooms worlds.
+ Prompters that teleport the player to other Rorooms worlds, placed in-world as `BasePart` instances with the `RR_WorldTeleporter` tag.
 
-| Data        | Value                |
-| ----------- | -------------------- |
-| `Tag`       | `RR_WorldTeleporter` |
-| `ClassName` | `BasePart`           |
-
-| Attribute    | Type     | Optional |
+| Attribute    | Type     | Required |
 | ------------ | -------- | -------- |
-| `RR_PlaceId` | `number` | ❌        |
+| `RR_PlaceId` | `number` | ✅        |
 
 ## Animated items 🔧
 
-Tools that support click-to-cycle animations.
-
-| Data        | Value             |
-| ----------- | ----------------- |
-| `Tag`       | `RR_AnimatedItem` |
-| `ClassName` | `Tool`            |
+Items that play animations, placed in-world as `Tool` instances with the `RR_AnimatedItem` tag.
 
 ### Children
 
@@ -105,9 +67,12 @@ Animations must be arranged in numerical order.
 
 ## Variant cyclers 🔁
 
-Prompt parts that cycle between various models.
+Prompters that cycle between various models, placed in-world as `BasePart` instances with the `RR_VariantCycler` tag.
 
-| Data        | Value              |
-| ----------- | ------------------ |
-| `Tag`       | `RR_VariantCycler` |
-| `ClassName` | `BasePart`         |
+### Children
+
+Variant models must be arranged in numerical order.
+
+- "1" - `Model`
+- "2" - `Model`
+- "..." - `Model`

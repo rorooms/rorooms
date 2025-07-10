@@ -10,6 +10,8 @@ sidebar_position: 4
 
 ### Easy loader
 
+Emotes are added as `Animation` instances within the Emotes folder:
+
 ```
 [Explorer panel]
 └── Rorooms/
@@ -23,7 +25,7 @@ sidebar_position: 4
     └── <-- Your properties here
 ```
 
-### Config
+### Manual config
 
 ```lua
 Rorooms:Configure({
@@ -41,16 +43,16 @@ Rorooms:Configure({
 
 ### Properties
 
-| Attribute             | Type        | Optional              |
-| --------------------- | ----------- | --------------------- |
-| `EmoteId`             | `string`    | ⚠️ - For manual config |
-| `Animation`           | `Animation` | ⚠️ - For easy loader   |
-| `Emoji`               | `string`    | ✅                     |
-| `AllowMovement`       | `boolean`   | ✅                     |
-| `DisplayName`         | `string`    | ✅                     |
-| `LevelRequirement`    | `number`    | ✅                     |
-| `GamepassRequirement` | `number`    | ✅                     |
-| `Category`            | `string`    | ✅                     |
-| `Color`               | `Color3`    | ✅                     |
-| `LabelText`           | `string`    | ✅                     |
-| `LabelIcon`           | `string`    | ✅                     |
+| Attribute             | Type        | Required                  |
+| --------------------- | ----------- | ------------------------- |
+| `EmoteId`             | `string`    | ⚠️ - Only w/ easy loader   |
+| `Animation`           | `Animation` | ✅ - Only w/ manual config |
+| `Emoji`               | `string`    | ❌                         |
+| `AllowMovement`       | `boolean`   | ❌                         |
+| `DisplayName`         | `string`    | ❌                         |
+| `LevelRequirement`    | `number`    | ❌                         |
+| `GamepassRequirement` | `number`    | ❌                         |
+| `Category`            | `string`    | ❌                         |
+| `Color`               | `Color3`    | ❌                         |
+| `LabelText`           | `string`    | ❌                         |
+| `LabelIcon`           | `string`    | ❌                         |
