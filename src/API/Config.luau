@@ -146,7 +146,9 @@ local CONFIG_TEMPLATE: Config = {
 			XPPerMinute = 10,
 			BaseLevelUpXP = 10,
 		},
-		UI = {},
+		UI = {
+			OnyxUITheme = {},
+		},
 	},
 	General = {
 		AssetId = 131892669922226,

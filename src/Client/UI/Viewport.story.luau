@@ -1,6 +1,6 @@
 local Rorooms = script.Parent.Parent.Parent.Parent
 local Topbar = require(Rorooms.SourceCode.Client.UI.States.Topbar)
-local Theme = require(script.Parent.OnyxUITheme)
+local OnyxUITheme = require(script.Parent.OnyxUITheme)
 local OnyxUI = require(Rorooms.Parent.OnyxUI)
 local Config = require(Rorooms.Config)
 local Fusion = require(Rorooms.Parent.Fusion)
@@ -165,7 +165,7 @@ return function(Target)
 		Viewport = Viewport,
 	})
 
-	Themer.Theme:is(Theme):during(function()
+	Themer.Theme:is(OnyxUI.Themer.NewTheme(Scope, OnyxUITheme)):during(function()
 		Scope:Viewport {
 			Target = Target,
 		}
