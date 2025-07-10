@@ -6,6 +6,10 @@ sidebar-position: 7
 
 Rorooms supports a variety of UI theming properties, empowering you to match your world's unique mood and style.
 
+![Theme examples](theming.png)
+
+## Setting a custom theme
+
 ```lua
 Rorooms:Configure({
   Systems = {
@@ -49,9 +53,6 @@ Rorooms:Configure({
         -- StrokeThickness = {
         --   Base = 1,
         -- },
-        -- Spacing = {
-        --   Base = 14,
-        -- },
         -- SpringSpeed = {
         --   Base = 60,
         -- },
@@ -64,4 +65,4 @@ Rorooms:Configure({
 })
 ```
 
-See the full list of properties [here](https://github.com/loneka/onyx-ui/blob/main/src/Themer/ThemeSpec.luau).
+See the full list of theme properties [here](https://github.com/loneka/onyx-ui/blob/main/src/Themer/ThemeSpec.luau).
