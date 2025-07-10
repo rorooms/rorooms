@@ -38,6 +38,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 				[Children] = {
 					Scope:Icon {
 						Image = Icon,
+						ImageColor3 = Theme.Colors.BaseContent.Main,
 						Size = Scope:Computed(function(Use)
 							return UDim2.fromOffset(Use(Theme.TextSize["1"]), Use(Theme.TextSize["1"]))
 						end),

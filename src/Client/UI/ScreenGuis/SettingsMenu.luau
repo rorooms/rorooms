@@ -99,7 +99,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 							if UpToDateValue == false then
 								return Use(Theme.Colors.Warning.Dark)
 							else
-								return Use(Theme.Colors.BaseContent.Main)
+								return Use(Theme.Colors.Primary.Main)
 							end
 						end),
 

@@ -5,7 +5,6 @@ local OnyxUI = require(Rorooms.Parent.OnyxUI)
 local Fusion = require(Rorooms.Parent.Fusion)
 local States = require(Rorooms.SourceCode.Client.UI.States)
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
-local OnyxUITheme = require(Rorooms.SourceCode.Client.UI.OnyxUITheme)
 
 local Children = Fusion.Children
 local Themer = OnyxUI.Themer
@@ -85,7 +84,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 
 								[Children] = {
 									Scope:ForValues(States.Topbar.Buttons, function(Use, Scope, Button)
-										return Themer.Theme:is(OnyxUITheme):during(function()
+										return Themer.Theme:is(Theme):during(function()
 											return Scope:TopbarButton(table.clone(Button))
 										end)
 									end),

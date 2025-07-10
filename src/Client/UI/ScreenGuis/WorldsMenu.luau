@@ -6,7 +6,6 @@ local States = require(Rorooms.SourceCode.Client.UI.States)
 local Worlds = require(Rorooms.SourceCode.Client.UI.States.Worlds)
 local Config = require(Rorooms.Config).Config
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
-local OnyxUITheme = require(Rorooms.SourceCode.Client.UI.OnyxUITheme)
 local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
 local Children = Fusion.Children
@@ -120,7 +119,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 									Scope:ForValues(
 										Config.Systems.Worlds.FeaturedWorlds,
 										function(Use, Scope, PlaceId: number)
-											return Themer.Theme:is(OnyxUITheme):during(function()
+											return Themer.Theme:is(Theme):during(function()
 												return Scope:WorldButton {
 													PlaceId = PlaceId,
 												}
@@ -152,7 +151,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 
 								[Children] = {
 									Scope:ForValues(States.Worlds.AssortedWorlds, function(Use, Scope, World)
-										return Themer.Theme:is(OnyxUITheme):during(function()
+										return Themer.Theme:is(Theme):during(function()
 											return Scope:WorldButton {
 												PlaceId = World.PlaceId,
 												Random = World.Random,
