@@ -10,32 +10,49 @@ Rorooms provides its own network of worlds, secured via peer-to-peer ranking bas
 
 ## Publishing
 
-### 1. Visit [rorooms.com/publish](https://rorooms.com/publish)
+1. Visit [rorooms.com/publish](https://rorooms.com/publish)
 
-![alt text](visit.png)
+![Publishing page](visit.png)
 
-### 2. Copy your world's PlaceId
+1. Copy your world's PlaceId
 
 ![Roblox game address bar](copy.png)
 
-### 3. Paste it in
+3. Paste it in
 
-![alt text](paste.png)
+![Pasting the PlaceId](paste.png)
 
-### 4. Publish! 🎉
+1. Publish! 🎉
 
-![alt text](publish.png)
+![Publish button](publish.png)
+
+## Featuring your own worlds
+
+List your own worlds right at the top of the menu with a few lines:
+
+```lua
+Rorooms:Configure({
+  Systems = {
+    Worlds = {
+      FeaturedWorlds = {
+        -- Your PlaceIds here
+      }
+    }
+  }
+})
+```
 
 ## Disabling discovery
 
 You may not want to participate in Rorooms' worlds network, and that choice is supported. Understand that by doing this, your world will not receive support from any other worlds.
 
-1. Open the Config module
-
-<!-- ![alt text](image-2.png) -->
-
-2. Type this in:
-
-<!-- ![alt text](image-4.png) -->
-
-3. Additionally, you can set `Enabled = false` to disable the worlds menu entirely. Otherwise, you can still promote your own worlds by pasting their PlaceIds into `FeaturedWorlds`.
+```lua
+Rorooms:Configure({
+  Systems = {
+    Worlds = {
+      DiscoveryEnabled = false,
+      Enabled = false, -- If you don't want to feature your own worlds
+    }
+  }
+})
+```

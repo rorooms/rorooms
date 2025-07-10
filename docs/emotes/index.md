@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # Emotes
 
+An integrated emotes system supporting categorization, level-locking, and monetization.
+
 ![Emotes menu](menu.png)
 
 ## Adding emotes

@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Items
 
+An integrated items system supporting categorization, level-locking, and monetization.
+
 ![Items menu](menu.png)
 
 ## Adding items

@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Profiles
 
-A full profiles system supporting nicknames, bios, roles, and leveling! Edit your own profile, or click on players in-game to view theirs.
+A comprehensive profiles system supporting nicknames, bios, roles, and leveling. Edit your own profile, or click on other players to view theirs.
 
 ![Profile menu](menu.png)
 
