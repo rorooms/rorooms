@@ -84,7 +84,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 										HeadingSize = 1.2,
 									},
 									Scope:Text {
-										Text = "Register with Rorooms to receive teleports from other worlds.",
+										Text = "Enable permissions and register to receive teleports from other worlds. Read more:",
 									},
 								},
 							},
