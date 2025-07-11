@@ -1,0 +1,44 @@
+name = "avafe/rorooms"
+version = "0.6.2"
+description = "All-in-one social framework"
+authors = ["Avafe"]
+repository = "https://github.com/loneka/rorooms"
+license = "MIT"
+
+[target]
+environment = "roblox"
+lib = "src/API/init.luau"
+build_files = ["src"]
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
+
+[dev_dependencies]
+scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
+
+[dependencies]
+Knit = { wally = "sleitnick/knit", version = "^1.4.7" }
+Component = { wally = "sleitnick/component", version = "^2.4.6" }
+Loader = { wally = "sleitnick/loader", version = "^2.0.0" }
+RemoteComponent = { wally = "encodedvenom/remotecomponent", version = "^1.0.2" }
+Trove = { wally = "sleitnick/trove", version = "^1.2.0" }
+Signal = { wally = "sleitnick/signal", version = "^2.0.1" }
+NeoHotbar = { wally = "imavafe/neohotbar", version = "^1.1.1" }
+BloxstrapRPC = { wally = "pizzaboxer/bloxstrap-rpc-sdk", version = "^1.0.1" }
+t = { wally = "osyrisrblx/t", version = "^3.1.1" }
+OnyxUI = { wally = "imavafe/onyx-ui", version = "^0.5.0" }
+Fusion = { wally = "elttob/fusion", version = "^0.3.0" }
+ColorUtils = { wally = "csqrl/colour-utils", version = "^1.4.1" }
+Future = { wally = "red-blox/future", version = "^1.0.1" }
+RateLimit = { wally = "red-blox/ratelimit", version = "^1.0.1" }
+Fetch = { wally = "red-blox/fetch", version = "^2.0.0" }
+Zone = { wally = "imavafe/zoneplus-reupload", version = "^3.2.0" }
+ProfileService = { wally = "imavafe/profileservice", version = "^1.0.0" }

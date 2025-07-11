@@ -6,7 +6,6 @@ local States = require(Rorooms.SourceCode.Client.UI.States)
 local Worlds = require(Rorooms.SourceCode.Client.UI.States.Worlds)
 local Config = require(Rorooms.Config).Config
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
-local OnyxUITheme = require(Rorooms.SourceCode.Client.UI.OnyxUITheme)
 local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
 local Children = Fusion.Children
@@ -60,9 +59,6 @@ return function(Scope: Fusion.Scope<any>, Props)
 				[Children] = {
 					Scope:Card {
 						ListEnabled = true,
-						ListPadding = Scope:Computed(function(Use)
-							return UDim.new(0, Use(Theme.Spacing["0.5"]))
-						end),
 						ListHorizontalFlex = Enum.UIFlexAlignment.Fill,
 						CornerRadius = Scope:Computed(function(Use)
 							return UDim.new(0, Use(Theme.CornerRadius["2"]))
@@ -74,12 +70,22 @@ return function(Scope: Fusion.Scope<any>, Props)
 						end),
 
 						[Children] = {
-							Scope:Heading {
-								Text = "Not registered ⚠️",
-								HeadingSize = 1.25,
-							},
-							Scope:Text {
-								Text = "This world will not receive support from the network. If this is intentional, you may disable the worlds system.",
+							Scope:Frame {
+								ListEnabled = true,
+								ListPadding = Scope:Computed(function(Use)
+									return UDim.new(0, Use(Theme.Spacing["0.5"]))
+								end),
+								ListHorizontalFlex = Enum.UIFlexAlignment.Fill,
+
+								[Children] = {
+									Scope:Heading {
+										Text = "Not registered!",
+										HeadingSize = 1.2,
+									},
+									Scope:Text {
+										Text = "Enable permissions and register to receive teleports from other worlds. Read more:",
+									},
+								},
 							},
 							Scope:TextInput {
 								Text = "devforum.roblox.com/t/3248014/18",
@@ -113,7 +119,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 									Scope:ForValues(
 										Config.Systems.Worlds.FeaturedWorlds,
 										function(Use, Scope, PlaceId: number)
-											return Themer.Theme:is(OnyxUITheme):during(function()
+											return Themer.Theme:is(Theme):during(function()
 												return Scope:WorldButton {
 													PlaceId = PlaceId,
 												}
@@ -145,7 +151,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 
 								[Children] = {
 									Scope:ForValues(States.Worlds.AssortedWorlds, function(Use, Scope, World)
-										return Themer.Theme:is(OnyxUITheme):during(function()
+										return Themer.Theme:is(Theme):during(function()
 											return Scope:WorldButton {
 												PlaceId = World.PlaceId,
 												Random = World.Random,

@@ -1,11 +1,11 @@
 {
   "name": "Rorooms",
   "tree": {
-    "$path": "Include/Linking.luau",
+    "$path": "include/Linking.luau",
     "Packages": {
       "$path": "Packages",
       "Rorooms": {
-        "$path": "Include/Linking.luau",
+        "$path": "include/Linking.luau",
         "Packages": {
           "$path": "Packages",
           "Rorooms": {
@@ -15,17 +15,11 @@
               "Shared": {
                 "$path": "src/Shared",
                 "ExtPackages": {
-                  "$path": "ExtPackages"
+                  "$path": "ext_packages"
                 }
               },
               "Storage": {
-                "$path": "src/Storage",
-                "ExtPackages": {
-                  "$path": "ExtServerPackages"
-                },
-                "Packages": {
-                  "$path": "ServerPackages"
-                }
+                "$path": "src/Storage"
               },
               "Server": {
                 "$path": "src/Server"

@@ -1,7 +1,12 @@
-/Packages
-/ServerPackages
-/wally.lock
+.pesde
+pesde.lock
+roblox_packages
+roblox_server_packages
+lune_packages
 
-/sourcemap.json
+Packages
+ServerPackages
 
-/build
+sourcemap.json
+
+build

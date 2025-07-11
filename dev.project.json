@@ -1,0 +1,46 @@
+{
+  "name": "Rorooms Testing",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Rorooms": {
+        "$className": "Folder",
+        "ThumbnailCamera": {
+          "$path": "include/ThumbnailCamera.rbxm"
+        },
+        "EasyLoader": {
+          "$path": "include/EasyLoader",
+          "$ignoreUnknownInstances": true
+        },
+        "Rorooms": {
+          "$path": "include/Linking.luau",
+          "Packages": {
+            "$path": "roblox_packages",
+            "Rorooms": {
+              "$path": "src/API",
+              "SourceCode": {
+                "$className": "Folder",
+                "Shared": {
+                  "$path": "src/Shared",
+                  "ExtPackages": {
+                    "$path": "ext_packages"
+                  }
+                },
+                "Storage": {
+                  "$path": "src/Storage"
+                },
+                "Server": {
+                  "$path": "src/Server"
+                },
+                "Client": {
+                  "$path": "src/Client"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

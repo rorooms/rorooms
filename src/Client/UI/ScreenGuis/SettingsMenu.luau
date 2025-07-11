@@ -1,3 +1,4 @@
+local MarketplaceService = game:GetService("MarketplaceService")
 local StarterGui = game:GetService("StarterGui")
 local Players = game:GetService("Players")
 
@@ -7,6 +8,8 @@ local Fusion = require(Rorooms.Parent.Fusion)
 local States = require(Rorooms.SourceCode.Client.UI.States)
 local Version = require(Rorooms.Version)
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
+local Config = require(Rorooms.Config).Config
+local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
 local Children = Fusion.Children
 local Themer = OnyxUI.Themer
@@ -59,34 +62,54 @@ return function(Scope: Fusion.Scope<any>, Props)
 				ListHorizontalFlex = Enum.UIFlexAlignment.Fill,
 
 				[Children] = {
-					Scope:SettingToggle {
-						Label = "Mute music",
-						Switched = States.UserSettings.MuteMusic,
-					},
-					Scope:SettingToggle {
-						Label = "Hide UI",
-						Switched = States.UserSettings.HideUI,
-					},
+					Scope:Frame {
+						ListEnabled = true,
+						ListHorizontalFlex = Enum.UIFlexAlignment.Fill,
 
-					Scope:Text {
-						Text = Scope:Computed(function(Use)
+						[Children] = {
+							Scope:SettingToggle {
+								Label = "Mute music",
+								Switched = States.UserSettings.MuteMusic,
+							},
+							Scope:SettingToggle {
+								Label = "Hide UI",
+								Switched = States.UserSettings.HideUI,
+							},
+						},
+					},
+					Scope:Divider {},
+					Scope:Button {
+						Name = "VersionButton",
+						Content = Scope:Computed(function(Use)
 							local UpToDateValue = Use(States.Rorooms.UpToDate)
-							local VersionStamp = `[Rorooms v{Version}]`
+							local VersionStamp = { Assets.Icons.Rorooms.LogoGlyph, `Rorooms {Version}` }
 
 							if UpToDateValue == false then
-								return `{VersionStamp} - Out of date`
+								table.insert(VersionStamp, `- Outdated!`)
+
+								return VersionStamp
 							else
 								return VersionStamp
 							end
 						end),
-						TextColor3 = Scope:Computed(function(Use)
+						ContentColor = OnyxUI.Util.Colors.Black,
+						Color = Scope:Computed(function(Use)
 							local UpToDateValue = Use(States.Rorooms.UpToDate)
+
 							if UpToDateValue == false then
 								return Use(Theme.Colors.Warning.Main)
 							else
-								return Use(Theme.Colors.NeutralContent.Dark)
+								return Use(Theme.Colors.Primary.Main)
 							end
 						end),
+
+						OnActivated = function()
+							if Players.LocalPlayer ~= nil then
+								pcall(function()
+									MarketplaceService:PromptPurchase(Players.LocalPlayer, Config.General.AssetId)
+								end)
+							end
+						end,
 					},
 				},
 			},

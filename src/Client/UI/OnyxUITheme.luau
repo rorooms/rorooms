@@ -4,11 +4,10 @@ local Fusion = require(Rorooms.Parent.Fusion)
 local ColorUtils = require(Rorooms.Parent.ColorUtils)
 
 local Util = OnyxUI.Util
-local Themer = OnyxUI.Themer
 
 local Scope = Fusion.scoped(Fusion)
 
-return Themer.NewTheme(Scope, {
+return {
 	Colors = {
 		Primary = {
 			Main = Util.Colors.White,
@@ -100,4 +99,4 @@ return Themer.NewTheme(Scope, {
 		Strong = 0.5,
 		Contrast = 1,
 	},
-})
+}

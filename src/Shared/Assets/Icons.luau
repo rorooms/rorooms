@@ -51,6 +51,9 @@ local Icons = {
 		PersonDelete = "rbxassetid://128704748965733",
 		PersonAdd = "rbxassetid://76229670394218",
 	},
+	Rorooms = {
+		LogoGlyph = "rbxassetid://137572114323504",
+	},
 }
 
 return Icons

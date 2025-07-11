@@ -46,6 +46,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 						return Assets.Icons.Categories.General
 					end
 				end),
+				ImageColor3 = Theme.Colors.BaseContent.Main,
 				FallbackImage = FallbackIcon,
 				Size = Scope:Computed(function(Use)
 					return UDim2.fromOffset(Use(Theme.TextSize["1.5"]), Use(Theme.TextSize["1.5"]))

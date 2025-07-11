@@ -5,7 +5,7 @@ local Fusion = require(Rorooms.Parent.Fusion)
 local Util = OnyxUI.Util
 local Themer = OnyxUI.Themer
 
-local OnyxUIFolder = Rorooms.Parent._Index["imavafe_onyx-ui@0.5.0"]["onyx-ui"]
+local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
 local TextInput = require(OnyxUIFolder.Components.TextInput)
 
 export type Props = TextInput.Props & {}

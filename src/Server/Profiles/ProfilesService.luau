@@ -4,7 +4,7 @@ local UserService = game:GetService("UserService")
 
 local Rorooms = script.Parent.Parent.Parent.Parent
 local Knit = require(Rorooms.Parent.Knit)
-local FilterString = require(Rorooms.SourceCode.Storage.ExtPackages.FilterString)
+local FilterString = require(Rorooms.SourceCode.Shared.ExtPackages.FilterString)
 local PlayerDataStoreService = require(Rorooms.SourceCode.Server.PlayerDataStore.PlayerDataStoreService)
 local t = require(Rorooms.Parent.t)
 local Config = require(Rorooms.Config).Config

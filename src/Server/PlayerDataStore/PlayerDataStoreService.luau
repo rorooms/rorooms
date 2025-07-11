@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 
 local Rorooms = script.Parent.Parent.Parent.Parent
-local ProfileService = require(Rorooms.SourceCode.Storage.Packages.ProfileService)
+local ProfileService = require(Rorooms.Parent.ProfileService)
 local Signal = require(Rorooms.Parent.Signal)
 local DataTemplate = require(script.Parent.DataTemplate)
 local DeepCopy = require(Rorooms.SourceCode.Shared.ExtPackages.DeepCopy)

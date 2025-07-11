@@ -71,6 +71,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 						return Use(Icon)
 					end
 				end),
+				ImageColor3 = Theme.Colors.BaseContent.Main,
 				Size = UDim2.fromOffset(30, 30),
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Position = UDim2.fromScale(0.5, 0.5),

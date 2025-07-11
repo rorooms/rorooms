@@ -6,7 +6,7 @@ local Assets = require(Rorooms.SourceCode.Shared.Assets)
 local Util = OnyxUI.Util
 local Themer = OnyxUI.Themer
 
-local OnyxUIFolder = Rorooms.Parent._Index["imavafe_onyx-ui@0.5.0"]["onyx-ui"]
+local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
 local Image = require(OnyxUIFolder.Components.Image)
 
 export type Props = Image.Props & {}

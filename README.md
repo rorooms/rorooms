@@ -1,20 +1,15 @@
 <p align="center">
   <a href="https://rorooms.com">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="/gh-assets/LogoWhite.svg"></source>
-      <source media="(prefers-color-scheme: light)" srcset="/gh-assets/LogoBlack.svg"></source>
-      <img alt="Rorooms" src="/gh-assets/LogoWhite.svg" height="70"></img>
+      <source media="(prefers-color-scheme: dark)" srcset="/gh-assets/Logo.svg"></source>
+      <source media="(prefers-color-scheme: light)" srcset="/gh-assets/Logo.svg"></source>
+      <img alt="Rorooms" src="/gh-assets/Logo.svg" height="70"></img>
     </picture>
   </a>
 </p>
 
 <p align="center">
-  Elevate your worlds.
-</p>
-
-<p align="center">
-  <a href="https://github.com/Rorooms/Rorooms/actions"><img src="https://img.shields.io/github/actions/workflow/status/Rorooms/Rorooms/ci.yaml?branch=main" alt="Build Status"></img></a>
-  <img title="MIT licensed" alt="License" src="https://img.shields.io/github/license/Rorooms/Rorooms"></img>
+  All-in-one social framework.
 </p>
 
 <p align="center">
@@ -25,13 +20,22 @@
 
 ---
 
-## [Installation 📦](https://rorooms.com/install/)
+## Social toolkit 🧰
+
+With profiles, items, emotes and more, your world has everything it needs to engage players.
+
+## Worlds network 🌐
+
+An optional network interconnecting all worlds and allowing for more reach than possible alone.
+
+## Happy players 🙌
+
+A seamless social experience, hanging and roleplaying with friends and enjoying more time in-game.
+
 
 ## [Documentation 📄](https://rorooms.com/docs/)
 
-## [Demo Place 🎮](https://rorooms.com/demo/)
-
-#
+## 
 
 <span align="center">
   <a href="https://suite.loneka.com" target="_blank" rel="noopener noreferrer"><img src="https://github.com/user-attachments/assets/05d870f1-a166-4908-a437-a62b27be4bec" height="120px"></img></a>

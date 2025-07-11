@@ -7,7 +7,6 @@ local OnyxUI = require(Rorooms.Parent.OnyxUI)
 local Fusion = require(Rorooms.Parent.Fusion)
 local States = require(Rorooms.SourceCode.Client.UI.States)
 local Components = require(Rorooms.SourceCode.Client.UI.Components)
-local OnyxUITheme = require(Rorooms.SourceCode.Client.UI.OnyxUITheme)
 local FriendsController = RunService:IsRunning() and require(Rorooms.SourceCode.Client.Friends.FriendsController)
 local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
@@ -54,7 +53,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 
 						[Children] = {
 							Scope:ForValues(States.Friends.InRorooms, function(Use, Scope, Friend)
-								return Themer.Theme:is(OnyxUITheme):during(function()
+								return Themer.Theme:is(Theme):during(function()
 									return Scope:FriendButton({
 										UserId = Friend.VisitorId,
 										DisplayName = Friend.DisplayName,
@@ -65,7 +64,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 								end)
 							end),
 							Scope:ForValues(States.Friends.NotInRorooms, function(Use, Scope, Friend)
-								return Themer.Theme:is(OnyxUITheme):during(function()
+								return Themer.Theme:is(Theme):during(function()
 									return Scope:FriendButton({
 										UserId = Friend.VisitorId,
 										DisplayName = Friend.DisplayName,

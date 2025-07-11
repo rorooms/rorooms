@@ -26,8 +26,15 @@ function Worlds:FetchAssortedWorlds(Count: number?)
 		Count = DEFAULT_WORLD_COUNT
 	end
 
-	self:FetchRandomWorlds(Count, true):await()
-	self:FetchTopWorlds(Count, true):await()
+	local RandomWorldsPromise = self:FetchRandomWorlds(Count, true)
+	if RandomWorldsPromise ~= nil then
+		RandomWorldsPromise:await()
+	end
+
+	local TopWorldsPromise = self:FetchTopWorlds(Count, true)
+	if TopWorldsPromise ~= nil then
+		TopWorldsPromise:await()
+	end
 
 	self:LoadAssortedWorlds(Count)
 end

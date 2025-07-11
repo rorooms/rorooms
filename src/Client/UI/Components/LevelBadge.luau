@@ -5,7 +5,7 @@ local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
 local Children = Fusion.Children
 
-local OnyxUIFolder = Rorooms.Parent._Index["imavafe_onyx-ui@0.5.0"]["onyx-ui"]
+local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
 local Frame = require(OnyxUIFolder.Components.Frame)
 
 export type Props = Frame.Props & {
@@ -29,14 +29,13 @@ return function(Scope: Fusion.Scope<any>, Props: Props)
 
 		[Children] = {
 			Scope:IconText {
-				Content = { Assets.Icons.UserBadges.Level },
-				ContentSize = Theme.TextSize["1.5"],
-			},
-			Scope:IconText {
 				Content = Scope:Computed(function(Use)
-					return { Use(Level) }
+					return { Assets.Icons.UserBadges.Level, Use(Level) }
 				end),
 				ContentSize = Theme.TextSize["1.25"],
+				ListPadding = Scope:Computed(function(Use)
+					return UDim.new(0, Use(Theme.Spacing["0.25"]))
+				end),
 			},
 		},
 	}))
