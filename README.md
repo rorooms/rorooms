@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://rorooms.com">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="/gh-assets/LogoWhite.svg"></source>
-      <source media="(prefers-color-scheme: light)" srcset="/gh-assets/LogoBlack.svg"></source>
-      <img alt="Rorooms" src="/gh-assets/LogoWhite.svg" height="70"></img>
+      <source media="(prefers-color-scheme: dark)" srcset="/gh-assets/Logo.svg"></source>
+      <source media="(prefers-color-scheme: light)" srcset="/gh-assets/Logo.svg"></source>
+      <img alt="Rorooms" src="/gh-assets/Logo.svg" height="70"></img>
     </picture>
   </a>
 </p>
