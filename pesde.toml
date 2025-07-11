@@ -41,4 +41,4 @@ Future = { wally = "red-blox/future", version = "^1.0.1" }
 RateLimit = { wally = "red-blox/ratelimit", version = "^1.0.1" }
 Fetch = { wally = "red-blox/fetch", version = "^2.0.0" }
 Zone = { wally = "imavafe/zoneplus-reupload", version = "^3.2.0" }
-ProfileService = { wally = "grilme99/profileservice", version = "^1.0.0" }
+ProfileService = { wally = "imavafe/profileservice", version = "^1.0.0" }

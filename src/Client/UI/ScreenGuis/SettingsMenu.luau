@@ -85,7 +85,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 							local VersionStamp = { Assets.Icons.Rorooms.LogoGlyph, `Rorooms {Version}` }
 
 							if UpToDateValue == false then
-								table.insert(VersionStamp, `- Out of date`)
+								table.insert(VersionStamp, `- Outdated!`)
 
 								return VersionStamp
 							else
@@ -97,7 +97,7 @@ return function(Scope: Fusion.Scope<any>, Props)
 							local UpToDateValue = Use(States.Rorooms.UpToDate)
 
 							if UpToDateValue == false then
-								return Use(Theme.Colors.Warning.Dark)
+								return Use(Theme.Colors.Warning.Main)
 							else
 								return Use(Theme.Colors.Primary.Main)
 							end

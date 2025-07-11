@@ -19,10 +19,7 @@
                 }
               },
               "Storage": {
-                "$path": "src/Storage",
-                "Packages": {
-                  "$path": "roblox_server_packages"
-                }
+                "$path": "src/Storage"
               },
               "Server": {
                 "$path": "src/Server"
