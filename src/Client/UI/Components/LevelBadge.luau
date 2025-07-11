@@ -29,14 +29,13 @@ return function(Scope: Fusion.Scope<any>, Props: Props)
 
 		[Children] = {
 			Scope:IconText {
-				Content = { Assets.Icons.UserBadges.Level },
-				ContentSize = Theme.TextSize["1.5"],
-			},
-			Scope:IconText {
 				Content = Scope:Computed(function(Use)
-					return { Use(Level) }
+					return { Assets.Icons.UserBadges.Level, Use(Level) }
 				end),
 				ContentSize = Theme.TextSize["1.25"],
+				ListPadding = Scope:Computed(function(Use)
+					return UDim.new(0, Use(Theme.Spacing["0.25"]))
+				end),
 			},
 		},
 	}))
