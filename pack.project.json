@@ -3,11 +3,11 @@
   "tree": {
     "$path": "include/Linking.luau",
     "Packages": {
-      "$path": "roblox_packages",
+      "$path": "Packages",
       "Rorooms": {
         "$path": "include/Linking.luau",
         "Packages": {
-          "$path": "roblox_packages",
+          "$path": "Packages",
           "Rorooms": {
             "$path": "src/API",
             "SourceCode": {
