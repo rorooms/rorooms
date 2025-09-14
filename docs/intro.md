@@ -11,7 +11,6 @@ sidebar_position: 1
 1. Get the [Rorooms](https://create.roblox.com/store/asset/131892669922226) model
 2. Insert it from the Toolbox
 3. Place into `ReplicatedStorage`
-4. [Start configuring](/docs/easy-loader)
 
 ### Wally
 
