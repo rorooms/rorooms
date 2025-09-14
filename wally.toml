@@ -23,7 +23,7 @@ license = "MIT"
 name = "imavafe/rorooms"
 realm = "shared"
 registry = "https://github.com/UpliftGames/wally-index"
-version = "0.6.2"
+version = "0.6.3"
 
 exclude = ["**"]
 include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml"]
