@@ -1,5 +1,5 @@
 name = "avafe/rorooms"
-version = "0.6.4"
+version = "0.6.5"
 description = "All-in-one social framework"
 authors = ["Avafe"]
 repository = "https://github.com/loneka/rorooms"
@@ -45,4 +45,4 @@ ProfileService = { wally = "imavafe/profileservice", version = "^1.0.0" }
 
 # Paste in after converting to Wally
 # exclude = ["**"]
-# include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml", "ext_packages"]
+# include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml", "ext_packages", "ext_packages/*"]
