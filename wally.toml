@@ -26,4 +26,4 @@ registry = "https://github.com/UpliftGames/wally-index"
 version = "0.6.3"
 
 exclude = ["**"]
-include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml"]
+include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml", "ext_packages"]

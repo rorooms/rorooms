@@ -42,3 +42,7 @@ RateLimit = { wally = "red-blox/ratelimit", version = "^1.0.1" }
 Fetch = { wally = "red-blox/fetch", version = "^2.0.0" }
 Zone = { wally = "imavafe/zoneplus-reupload", version = "^3.2.0" }
 ProfileService = { wally = "imavafe/profileservice", version = "^1.0.0" }
+
+# Paste in after converting to Wally
+# exclude = ["**"]
+# include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml", "ext_packages"]
