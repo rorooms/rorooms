@@ -5,10 +5,7 @@ local Assets = require(Rorooms.SourceCode.Shared.Assets)
 
 local Children = Fusion.Children
 
-local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
-local Avatar = require(OnyxUIFolder.Components.Avatar)
-
-export type Props = Avatar.Props & {
+export type Props = {
 	Editable: Fusion.UsedAs<boolean>?,
 	Image: Fusion.UsedAs<string>?,
 	Status: Fusion.UsedAs<string>?,

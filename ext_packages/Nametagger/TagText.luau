@@ -1,13 +1,10 @@
 local RoRooms = script.Parent.Parent.Parent.Parent.Parent
 local OnyxUI = require(RoRooms.Parent.OnyxUI)
 local Fusion = require(RoRooms.Parent.Fusion)
-local OnyxUIFolder = RoRooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
 
 local Util = OnyxUI.Util
 
-local Text = require(OnyxUIFolder.Components.Text)
-
-export type Props = Text.Props & {}
+export type Props = {}
 
 return function(Scope: Fusion.Scope<any>, Props: Props)
 	local Scope = Fusion.innerScope(Scope, Fusion, OnyxUI.Components)

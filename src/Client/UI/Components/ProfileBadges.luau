@@ -4,10 +4,7 @@ local Fusion = require(Rorooms.Parent.Fusion)
 local Assets = require(Rorooms.SourceCode.Shared.Assets)
 local Profiles = require(Rorooms.SourceCode.Client.UI.States.Profiles)
 
-local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
-local Frame = require(OnyxUIFolder.Components.Frame)
-
-export type Props = Frame.Props & {
+export type Props = {
 	UserId: Fusion.UsedAs<number>?,
 }
 

@@ -6,10 +6,7 @@ local Assets = require(Rorooms.SourceCode.Shared.Assets)
 local Util = OnyxUI.Util
 local Themer = OnyxUI.Themer
 
-local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
-local Image = require(OnyxUIFolder.Components.Image)
-
-export type Props = Image.Props & {}
+export type Props = {}
 
 return function(Scope, Props: Props)
 	local Scope = Fusion.innerScope(Scope, Fusion, OnyxUI.Components, Util)

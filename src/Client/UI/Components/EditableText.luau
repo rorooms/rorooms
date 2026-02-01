@@ -5,10 +5,7 @@ local Fusion = require(Rorooms.Parent.Fusion)
 local Util = OnyxUI.Util
 local Themer = OnyxUI.Themer
 
-local OnyxUIFolder = Rorooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
-local TextInput = require(OnyxUIFolder.Components.TextInput)
-
-export type Props = TextInput.Props & {}
+export type Props = {}
 
 return function(Scope, Props: Props)
 	local Scope = Fusion.innerScope(Scope, Fusion, OnyxUI.Components, Util)

@@ -1,16 +1,14 @@
 local RoRooms = script.Parent.Parent.Parent.Parent.Parent
 local OnyxUI = require(RoRooms.Parent.OnyxUI)
 local Fusion = require(RoRooms.Parent.Fusion)
-local OnyxUIFolder = RoRooms.Parent[".pesde"]["imavafe_onyx-ui@0.5.3"]["onyx-ui"]
 
 local Children = Fusion.Children
 local Themer = OnyxUI.Themer
 local Util = OnyxUI.Util
 
-local Frame = require(OnyxUIFolder.Components.Frame)
 local TagText = require(script.Parent.TagText)
 
-export type Props = Frame.Props & {
+export type Props = {
 	Value: Fusion.UsedAs<any>,
 	Image: Fusion.UsedAs<string>?,
 }
