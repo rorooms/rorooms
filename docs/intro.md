@@ -14,7 +14,7 @@ sidebar_position: 1
 
 ### Wally
 
-1. Copy the [Wally package](https://wally.run/package/rorooms/rorooms) details
+1. Copy the [Wally package](https://wally.run/package/imavafe/rorooms) details
 2. Paste it into your `wally.toml` dependencies
 3. Run `wally install`
 
